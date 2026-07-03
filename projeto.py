@@ -11,6 +11,10 @@
 
 import pandas as pd
 
+pd.set_option('display.max_columns', None)   # mostra todas as colunas
+pd.set_option('display.width', None)         # não quebra linha por largura do terminal
+pd.set_option('display.max_colwidth', 30)
+
 from bio.ler_fasta import ler_fasta
 from bio.sequencia import (
     traduzir,
