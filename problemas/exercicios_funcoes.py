@@ -1,0 +1,50 @@
+# Exercícios das funções
+#
+# Aqui você testa CADA função que criou em bio/sequencia.py, isoladamente,
+# numa sequência pequena, para conferir que todas funcionam.
+#
+# Leia o enunciado em problemas/README.md (seção "Exercícios das funções").
+#
+# Para cada bloco abaixo, escreva um print mostrando o resultado e confira se
+# bate com o esperado no comentário.
+
+from bio.sequencia import (
+    complementar,
+    complementar_reversa,
+    transcrever,
+    traduzir,
+    calcular_percentual,
+    contar_bases,
+    encontrar_inicio,
+)
+
+
+# 1) complementar        — esperado: "TAGC"
+# print(complementar("ATCG"))
+
+
+# 2) complementar_reversa — esperado: "CGAT"
+# print(complementar_reversa("ATCG"))
+
+
+# 3) transcrever          — esperado: "AUCG"
+# print(transcrever("ATCG"))
+
+
+# 4) encontrar_inicio     — esperado: "ATGGGGTAA" (começa no 1º ATG)
+# print(encontrar_inicio("CCCATGGGGTAA"))
+
+
+# 5) traduzir             — esperado: "MAIVMGR*KGAR*"
+# print(traduzir("ATGGCCATTGTAATGGGCCGCTGAAAGGGTGCCCGATAG"))
+
+#    traduzir com parar=True — deve PARAR no primeiro stop codon, esperado: "MAIVMGR"
+# print(traduzir("ATGGCCATTGTAATGGGCCGCTGAAAGGGTGCCCGATAG", parar=True))
+
+
+# 6) calcular_percentual  — esperado: 0.5 (metade das bases é A)
+# print(calcular_percentual("ATCGAAAA", ["A"]))
+
+
+# 7) contar_bases         — esperado: {"A": 2, "T": 1, "C": 1, "G": 1}
+# print(contar_bases("ATCGA"))

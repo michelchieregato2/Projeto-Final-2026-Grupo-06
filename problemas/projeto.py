@@ -13,23 +13,10 @@ import pandas as pd
 
 from bio.ler_fasta import ler_fasta
 from bio.sequencia import (
-    complementar,
-    complementar_reversa,
-    transcrever,
     traduzir,
     calcular_percentual,
-    contar_bases,
     encontrar_inicio,
 )
-
-
-# ------------------------------------------------------------------
-# Parte 0 — Aquecimento: teste suas funções numa sequência pequena
-# ------------------------------------------------------------------
-# Ex:
-#   print(complementar("ATCG"))
-#   print(encontrar_inicio("CCCATGGGGTAA"))
-#   print(traduzir("ATGGCCATTGTAATGGGCCGCTGAAAGGGTGCCCGATAG"))
 
 
 # ------------------------------------------------------------------

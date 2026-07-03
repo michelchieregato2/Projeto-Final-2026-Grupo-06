@@ -1,7 +1,37 @@
-# O Projeto: um panorama da família Flaviviridae
+# Usando as suas funções
 
-Agora que você criou suas funções em `bio/sequencia.py`, vamos usá-las numa **investigação
-de verdade**.
+Depois de criar as funções em `bio/sequencia.py`, você tem **duas entregas** nesta pasta:
+
+1. **`exercicios_funcoes.py`** — testar cada função isoladamente. Mostra que você domina o
+   básico. (Veja a primeira seção abaixo.)
+2. **`projeto.py`** — a investigação completa dos vírus da família Flaviviridae, montando uma
+   tabela com pandas e tirando conclusões. É aqui que você mostra que sabe *aplicar* as
+   funções num problema real. (Veja "O Projeto", mais abaixo.)
+
+> **Preparação:** o projeto usa pandas. Se ainda não instalou, rode na raiz do projeto:
+> `pip install -r requirements.txt`
+
+=================================================================
+
+# Entrega 1 — Exercícios das funções (`exercicios_funcoes.py`)
+
+Confira que cada função que você criou funciona numa sequência pequena. Para cada uma,
+escreva um `print` e veja se o resultado bate com o esperado:
+
+- `complementar("ATCG")` -> `"TAGC"`
+- `complementar_reversa("ATCG")` -> `"CGAT"`
+- `transcrever("ATCG")` -> `"AUCG"`
+- `encontrar_inicio("CCCATGGGGTAA")` -> `"ATGGGGTAA"` (começa no 1º `ATG`)
+- `traduzir("ATGGCCATTGTAATGGGCCGCTGAAAGGGTGCCCGATAG")` -> `"MAIVMGR*KGAR*"`
+- `traduzir(..., parar=True)` -> deve parar no primeiro stop codon
+- `calcular_percentual("ATCGAAAA", ["A"])` -> `0.5`
+- `contar_bases("ATCGA")` -> `{"A": 2, "T": 1, "C": 1, "G": 1}`
+
+O arquivo `exercicios_funcoes.py` já vem com os blocos prontos para você preencher.
+
+=================================================================
+
+# Entrega 2 — O Projeto: um panorama da família Flaviviridae (`projeto.py`)
 
 O arquivo `arquivos/Flaviviridae-genomes.fasta` reúne os genomas de referência de **toda a
 família viral _Flaviviridae_** — mais de 150 vírus diferentes, incluindo velhos conhecidos
@@ -15,31 +45,6 @@ responder a duas perguntas:
 2. Esses vírus têm um genoma organizado de forma parecida? Quão grande é a **proteína** que cada um produz?
 
 Vamos construir isso por partes. Cada função que você escreveu vai virar uma peça da análise.
-
-> **Preparação:** este projeto usa pandas. Se ainda não instalou, rode na raiz do projeto:
-> `pip install -r requirements.txt`
-
----------------------------
-
-## Parte 0 — Aquecimento: teste as suas funções
-
-Antes de partir para os 150 vírus, confira que as suas funções funcionam numa sequência
-pequena. Escreva alguns `print` testando:
-
-- `complementar("ATCG")`
-- `complementar_reversa("ATCG")`
-- `transcrever("ATCG")`
-- `encontrar_inicio("CCCATGGGGTAA")` (deve devolver a partir do `ATG`)
-- `traduzir("ATGGCCATTGTAATGGGCCGCTGAAAGGGTGCCCGATAG")`
-
-Isso serve para você ganhar confiança de que a base do projeto está correta.
-
-Dica de import:
-```python
-from bio.sequencia import (complementar, complementar_reversa, transcrever,
-                           traduzir, calcular_percentual, contar_bases,
-                           encontrar_inicio)
-```
 
 ---------------------------
 
