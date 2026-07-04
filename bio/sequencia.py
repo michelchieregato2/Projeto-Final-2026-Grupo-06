@@ -7,8 +7,7 @@
 # "raise NotImplementedError(...)" quando for resolver.
 
 # Você vai precisar destas constantes
-from bio.constantes import DNA_PARA_AMINOACIDO, DNA_STOP_CODONS, CONVERSOR_DE_BASE
-
+from bio.constantes import CONVERSOR_DE_BASE
 
 def complementar(sequencia):
     """
@@ -20,11 +19,10 @@ def complementar(sequencia):
     Dica: percorra cada base da sequência e vá montando (concatenando)
     a sequência complementar numa nova string.
     """
-    print(f"Oi, estou dentro da função e recebi a sequencia: {sequencia}")
-
     sequencia_complementar = ""
 
-    # Michel, termina para mim? Falta o for
+    for base in sequencia:
+        sequencia_complementar = sequencia_complementar + CONVERSOR_DE_BASE[base]
 
     return sequencia_complementar
 
