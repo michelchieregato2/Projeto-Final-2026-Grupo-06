@@ -20,6 +20,8 @@ def complementar(sequencia):
     Dica: percorra cada base da sequência e vá montando (concatenando)
     a sequência complementar numa nova string.
     """
+    print(f"Oi, estou dentro da função e recebi a sequencia: {sequencia}")
+    # ...
     raise NotImplementedError("Implemente a função complementar")
 
 
