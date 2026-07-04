@@ -25,7 +25,11 @@ def complementar(sequencia):
     sequencia_complementar = ""
 
     # Michel, termina para mim? Falta o for
-
+    for base in sequencia:
+        if base == 'A':
+            sequencia_complementar = sequencia_complementar + 'T'
+        elif base == 'T':
+            sequencia_complementar = sequencia_complementar + 'A'
     return sequencia_complementar
 
 
